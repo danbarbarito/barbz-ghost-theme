@@ -63,3 +63,7 @@ typings/
 
 
 # End of https://www.gitignore.io/api/node
+
+assets/videos/
+assets/images/
+assets/files/
