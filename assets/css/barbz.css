@@ -15,7 +15,8 @@ pre {
 }
 
 pre[class*=language-] code {
-    overflow: hidden !important;
+    overflow-y: hidden !important;
+    overflow-x: scroll !important;
 }
 
 * { box-sizing: border-box; }
@@ -148,7 +149,8 @@ body {
     height: 50vh;
     max-height: 600px;
     background: rgba(0,0,0,.85);
-    border: 1px solid white;
+    border: 1px solid black;
+    border-style: inset;
 }
 
 .header-box.is-small#accent1 {
