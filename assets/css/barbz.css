@@ -15,8 +15,7 @@ pre {
 }
 
 pre[class*=language-] code {
-    overflow-y: hidden !important;
-    overflow-x: scroll !important;
+    overflow: scroll !important;
 }
 
 * { box-sizing: border-box; }
@@ -149,7 +148,7 @@ body {
     height: 50vh;
     max-height: 600px;
     background: rgba(0,0,0,.85);
-    border: 1px solid black;
+    border: 1px solid transparent;
     border-style: inset;
 }
 
@@ -618,10 +617,16 @@ body {
 }
 
 
-.subscribe-form .form-group {
+.subscribe-form .form-group, .subscribe-overlay-content .form-group {
     margin-bottom: 0px;
 }
 
 footer i {
     font-size: 22px !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .socal-links i {
+        font-size: 15px !important;
+    }
 }

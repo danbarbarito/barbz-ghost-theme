@@ -95,7 +95,8 @@
                     >
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; {{@blog.title}} &mdash;</small>
-                            <h3 class="read-next-card-header-title"><a href="{{@blog.url}}/tag/{{../tags.[0].slug}}/">{{../tags.[0].name}}</a></h3>
+                            <h3 class="read-next-card-header-title"><a style="font-weight:bold;" href="{{@blog.url}}/tag/{{../tags.[0].slug}}/">{{../tags.[0].name}}</a></h3>
+                            <h3 class="read-next-card-header-title"><a style="font-weight:light; font-size: 18px;" href="{{@blog.url}}/tag/{{../tags.[0].slug}}/">{{../tags.[0].description}}</a></h3>
                         </header>
                         <div class="read-next-divider">{{> "icons/infinity"}}</div>
                         <div class="read-next-card-content">
