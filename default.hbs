@@ -70,6 +70,7 @@
         var maxPages = parseInt('{{pagination.pages}}');
     </script>
     <script src="{{asset "js/infinitescroll.js"}}"></script>
+    <script src="{{asset "js/smoothscroll.js"}}"></script>
     {{/if}}
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js" ></script>
@@ -83,6 +84,10 @@
      ga('create', 'UA-63906139-1', 'auto');
      ga('send', 'pageview');
 
+    </script>
+
+    <script>
+     var scroll = new SmoothScroll('a[href*="#"]');
     </script>
 
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}

@@ -10,39 +10,39 @@
 </header>
 
 {{#get "posts" include="tags,author"}}
-{{!-- The main content area --}}
-<main id="site-main" class="site-main outer" role="main">
-    <div class="inner">
+    {{!-- The main content area --}}
+    <main id="site-main" class="site-main outer" role="main">
+        <div class="inner">
 
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Main Ad -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-8041036017733613"
-             data-ad-slot="8506750880"
-             data-ad-format="auto"></ins>
-        <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Main Ad -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8041036017733613"
+                 data-ad-slot="8506750880"
+                 data-ad-format="auto"></ins>
+            <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
 
-        <div class="post-feed">
-            {{#foreach posts}}
+            <div class="post-feed">
+                {{#foreach posts}}
 
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
+                    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                    {{> "post-card"}}
 
-            {{/foreach}}
+                {{/foreach}}
+            </div>
+
+            {{!-- Email subscribe form at the bottom of the page --}}
+            {{#if @labs.subscribers}}
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    {{subscribe_form placeholder="youremail@example.com"}}
+                </section>
+            {{/if}}
+
         </div>
-
-        {{!-- Email subscribe form at the bottom of the page --}}
-        {{#if @labs.subscribers}}
-            <section class="subscribe-form">
-                <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
-                <p>Get the latest posts delivered right to your inbox</p>
-                {{subscribe_form placeholder="youremail@example.com"}}
-            </section>
-        {{/if}}
-
-    </div>
-</main>
+    </main>
 {{/get}}
