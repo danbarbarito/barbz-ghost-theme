@@ -61,9 +61,15 @@ pre[class*=language-] code {
 
 .arrow {
   position: absolute;
-  bottom: 0;
+  bottom: 30px;
   left: 50%;
   margin-left:-20px;
+}
+
+@media only screen and (max-width: 768px) and (min-height: 600px) {
+    .arrow {
+        display: none;
+    }
 }
 
 .bounce {
@@ -153,6 +159,13 @@ body {
     background: rgba(0,0,0,.85);
     border: 1px solid transparent;
     border-style: inset;
+}
+
+@media screen and (max-width: 991px) {
+    .header-box.is-small {
+        min-height: initial;
+        height: 150px;
+    }    
 }
 
 .header-box.is-small#accent1 {
@@ -360,4 +373,20 @@ footer i {
     .socal-links i {
         font-size: 15px !important;
     }
+}
+
+.tags-list {
+    padding-left: 0px;
+}
+
+.tags-list li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+.tags-list > li:not(:last-child):after {
+    content: ' | ';
+    padding-left: 10px;
 }

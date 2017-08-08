@@ -1,1 +1,3 @@
 # Barbz: Ghost Theme
+
+----------

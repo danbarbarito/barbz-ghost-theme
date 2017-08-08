@@ -25,6 +25,15 @@
              (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
 
+            {{#get "tags" limit="all"}}
+                <h2>Tags</h2>
+                <ul class="tags-list">
+                {{#foreach tags}}
+                    {{> "tag-list"}}
+                {{/foreach}}
+                </ul>
+            {{/get}}
+
             <div class="post-feed">
                 {{#foreach posts}}
 
